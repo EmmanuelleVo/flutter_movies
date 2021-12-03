@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies/screens/home_screen.dart';
 import 'package:movies/screens/sidebar.dart';
-import 'constants.dart';
+import 'styles/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const Scaffold(
         backgroundColor: mainBackgroundColor, // 0x = héxadécimal et FF = opacité
-        body: SideBarScreen(),
+        body: MyHomeScreen(),
       ),
     );
   }

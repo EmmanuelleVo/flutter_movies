@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies/constants.dart';
+import 'package:movies/styles/constants.dart';
 
 class MenuItemData {
   final String _text;

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies/models/data_item.dart';
-import '../constants.dart';
-import 'package:flutter/material.dart';
+import '../styles/constants.dart';
 
 
 class MenuItem extends StatelessWidget {
@@ -29,13 +28,13 @@ class MenuItem extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              width: 12,
+              width: horizontalSpace*0.8,
             ), // espace entre icon et text
             Text(_menuItemData.text,  style: fontStyleMenuItem),
           ],
         ),
         const SizedBox(
-          height: 20,
+          height: verticalSpace,
         ),
       ],
     );

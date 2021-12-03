@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:movies/models/data_item.dart';
+import 'package:movies/partials/avatar.dart';
 import 'package:movies/partials/menu_item.dart';
 
-import '../constants.dart';
+import '../styles/constants.dart';
 
 class SideBarScreen extends StatefulWidget {
   const SideBarScreen({Key? key}) : super(key: key);
@@ -24,17 +25,36 @@ class _SideBarScreenState extends State<SideBarScreen> {
         child: SafeArea(
           child: Column(
             children: [
+              Column(
+                children: [
+                  Row(children: [
+                    Avatar(),
+                    const SizedBox(width: horizontalSpace),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Ugly Dog'),
+                        Text('By Maide Akdede', style: fontStyleLegend),
+                      ],
+                    )
+                  ]
+                  ),
+                  SizedBox(height: verticalSpace*2)
+                ],
+              ),
+
               //MenuItem(color: Colors.amberAccent, text: 'Search', icon: Icons.search),
-              //MenuItem(color: Colors.amberAccent, text: 'Calendar', icon: Icons.calendar_today),
               MenuItem(menuItemsData[0]),
               MenuItem(menuItemsData[1]),
               MenuItem(menuItemsData[2]),
               Spacer(),
-              Row(children: const [
-                Icon(Icons.logout),
-                SizedBox(width: 5),
-                Text('Log Out', style: fontStyleLegend),
-              ],)
+              Row(
+                children: const [
+                  Icon(Icons.logout),
+                  SizedBox(width: 5),
+                  Text('Log Out', style: fontStyleLegend),
+                ],
+              )
             ],
           ),
         ),
